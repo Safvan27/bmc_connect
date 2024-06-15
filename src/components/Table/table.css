@@ -1,0 +1,16 @@
+.user-table {
+    background-color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.user-table-header {
+    font-weight: 400;
+    font-size: 18px;
+    color: #717171;
+}
+
+.chip-text {
+    font-weight: bold;
+    margin-right: 5px;
+}

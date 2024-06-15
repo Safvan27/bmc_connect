@@ -1,0 +1,23 @@
+.table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header-text {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.header-button {
+    margin-left: auto;
+    display: flex;
+}
+
+.load-more-button {
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    margin-top: 16px;
+}
