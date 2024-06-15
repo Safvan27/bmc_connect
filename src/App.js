@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import "./App.css";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import UserManagementPage from "./pages/UserManagementPage/UserManagementPage";
+import Header from "./components/Header";
+import React, { useEffect } from "react";
+import { setAuthToken } from "./api/apiClient";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const token =
+        "e3d497998ca18d76b283777fb9a5643f73199652d94105e666bc35f5e2c59adb";
+
+    useEffect(() => {
+        setAuthToken(token);
+    }, [token]);
+
+    return (
+        <Router>
+            <div className="App">
+                <Header />
+                <Routes>
+                    <Route exact path="/" element={<LandingPage />} />
+                    <Route
+                        path="/user-management"
+                        element={<UserManagementPage />}
+                    />
+                </Routes>
+            </div>
+        </Router>
+    );
+};
 
 export default App;
