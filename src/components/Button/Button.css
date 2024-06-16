@@ -20,6 +20,14 @@
     margin-right: 20px;
 }
 
+.button.transparent-no-border {
+    background-color: #ffffff00;
+    color: rgb(42, 42, 42);
+    border: 0px;
+    padding: 11px 15px 11px 15px;
+    margin-right: 5px;
+}
+
 .button.grey {
     background-color: #b3adad;
     border: 2px solid #7b7b7b;
@@ -38,4 +46,12 @@
 .button.grey:hover {
     background-color: #ffffff;
     border: 2px solid #0e0e0e8a;
+}
+
+.button.transparent-no-border:hover {
+    background-color: #ffffff;
+    border: 2px solid #0e0e0e8a;
+}
+.button.default:hover {
+    border: 0pxa;
 }

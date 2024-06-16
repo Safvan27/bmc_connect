@@ -30,7 +30,7 @@ export default function Modal({
     };
     return (
         <React.Fragment>
-            <Dialog open={open} onClose={handleClose}>
+            <Dialog open={open} disableEscapeKeyDown>
                 <DialogTitle className="form-label">
                     {title}
                     {type !== "ADD" && (

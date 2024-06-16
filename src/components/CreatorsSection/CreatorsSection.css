@@ -1,0 +1,31 @@
+.creators {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+}
+
+.creators h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.creators-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.creator {
+    text-align: center;
+}
+
+.creator img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.creator h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
