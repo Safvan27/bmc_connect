@@ -20,6 +20,11 @@
     margin-right: 20px;
 }
 
+.button.search {
+    background-color: #ffffff00 !important;
+    color: rgb(0, 0, 0) !important;
+}
+
 .button.transparent-no-border {
     background-color: #ffffff00;
     color: rgb(42, 42, 42);

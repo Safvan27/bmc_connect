@@ -1,17 +1,27 @@
 .footer {
+    background-color: #fff;
+    padding: 40px 20px;
+    border-top: 1px solid #eaeaea;
+}
+
+.footer-container {
     display: flex;
     justify-content: space-around;
-    padding: 50px 20px;
-    background-color: #fff;
-    border-top: 1px solid #ccc;
+    flex-wrap: wrap;
 }
 
 .footer-section {
-    text-align: left;
+    margin: 10px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-logo-section {
+    margin: 50px 0 0 50px;
 }
 
 .footer-section h3 {
-    font-size: 18px;
+    font-size: 1em;
     margin-bottom: 10px;
 }
 
@@ -26,5 +36,30 @@
 
 .footer-section ul li a {
     text-decoration: none;
-    color: #6c63ff;
+    color: #333;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-apps {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.footer-apps a {
+    margin: 0 10px;
+}
+
+.footer-apps img {
+    width: 135px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.8em;
+    color: #999;
+    margin-top: 20px;
 }

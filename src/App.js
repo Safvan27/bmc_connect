@@ -1,10 +1,10 @@
+import React, { useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
+import { setAuthToken } from "./api/apiClient";
+import Header from "./components/Header/Header";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import UserManagementPage from "./pages/UserManagementPage/UserManagementPage";
-import Header from "./components/Header/Header";
-import React, { useEffect } from "react";
-import { setAuthToken } from "./api/apiClient";
 
 const App = () => {
     const token =
