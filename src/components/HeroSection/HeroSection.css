@@ -1,0 +1,61 @@
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero .highlight {
+    color: #6c63ff;
+}
+
+.phone-input-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.phone-input-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+}
+
+.phone-input-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hero-images {
+    position: relative;
+    margin-top: 40px;
+}
+
+.chat-image {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gift-image {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}

@@ -14,3 +14,10 @@
     font-weight: bold;
     margin-right: 5px;
 }
+
+.table-loader {
+    display: "flex";
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}

@@ -3,7 +3,6 @@ import BarChartIcon from "@mui/icons-material/BarChart";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Container from "@mui/material/Container";
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import {
     createUser,
     deleteUser,
@@ -17,16 +16,19 @@ import DataTableHelpers from "../../helpers/DataTableHelpers";
 import "./style.css";
 
 export default function UserManagementPage() {
-    const navigate = useNavigate();
     const [users, setUsers] = useState([]);
     const [pageNum, setPageNum] = useState(1);
+    const [userDataLoading, setUserDataLoading] = useState(1);
 
     useEffect(() => {
         const fetchUsers = async () => {
+            setUserDataLoading(true);
             try {
                 const usersData = await getUsers();
                 setUsers(usersData);
+                setUserDataLoading(false);
             } catch (error) {
+                setUserDataLoading(false);
                 console.error("Failed to fetch users", error);
             }
         };
@@ -38,22 +40,25 @@ export default function UserManagementPage() {
 
     const handleLoadMore = async () => {
         try {
+            setUserDataLoading(true);
             const usersData = await loadMoreUsers(pageNum + 1, 10);
             setPageNum(pageNum + 1);
             setUsers([...users, ...usersData]);
+            setUserDataLoading(false);
         } catch (error) {
+            setUserDataLoading(false);
             console.error("Failed to fetch users", error);
         }
     };
 
     const handleDelete = async (id) => {
-        await deleteUser(id);
-        const deletedUserList = users.filter((item) => item.id !== id);
-        setUsers(deletedUserList);
-    };
-
-    const handleButtonClick = () => {
-        navigate("/");
+        try {
+            await deleteUser(id);
+            const deletedUserList = users.filter((item) => item.id !== id);
+            setUsers(deletedUserList);
+        } catch (error) {
+            console.error("Failed to fetch users", error);
+        }
     };
 
     const handleStats = () => {
@@ -116,11 +121,11 @@ export default function UserManagementPage() {
                         />
                     </div>
                 </div>
-                <button onClick={handleButtonClick}>Go to User Login</button>
                 <DataTable
                     data={userTableData}
                     onDelete={handleDelete}
                     onEdit={handleEdit}
+                    isLoading={userDataLoading}
                 />
                 <div className="load-more-button">
                     <Button type="grey" onClick={handleLoadMore}>

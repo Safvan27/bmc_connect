@@ -10,20 +10,23 @@ import {
     TableHead,
     TableRow,
     Typography,
+    CircularProgress,
 } from "@mui/material";
 import React from "react";
 import "./table.css";
 
-const DataTable = ({ data, onDelete, onEdit }) => {
+const DataTable = ({ data, onDelete, onEdit, isLoading }) => {
     const getChatTextStyle = (chat) => {
         return {
             fontWeight: "bold",
             color: chat ? "#4C9A2A" : "#FF0000",
         };
     };
+
     return (
         <TableContainer
             component={Paper}
+            className="table-container"
             sx={{ maxHeight: 500, minHeight: 500 }}
         >
             <Table
@@ -76,6 +79,12 @@ const DataTable = ({ data, onDelete, onEdit }) => {
                     ))}
                 </TableBody>
             </Table>
+
+            {isLoading && (
+                <div className="table-loader">
+                    <CircularProgress />
+                </div>
+            )}
         </TableContainer>
     );
 };

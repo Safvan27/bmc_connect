@@ -13,7 +13,7 @@ import {
     TextField,
 } from "@mui/material";
 import React, { useState } from "react";
-import Button from "../../components/Button";
+import Button from "../Button";
 
 import "./Form.css";
 
