@@ -6,8 +6,13 @@
 
 .user-table-header {
     font-weight: 400;
+    background-color: #f8f8f8;
     font-size: 18px;
     color: #717171;
+}
+.user-table-row {
+    color: #717171;
+    background-color: #fffffff2;
 }
 
 .chip-text {

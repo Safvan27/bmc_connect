@@ -31,15 +31,15 @@
     padding: 10px 20px;
     font-size: 16px;
     border: none;
-    background-color: #000;
-    color: #fff;
+    background-color: #787878;
+    color: #d3d3d3;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .start-button {
-    background-color: #000;
-    color: #fff;
+    background-color: #0c0c0c;
+    color: #f7f7f7;
     font-size: 13px;
     border-radius: 25px;
     width: 150px;

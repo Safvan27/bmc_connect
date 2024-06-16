@@ -55,7 +55,7 @@ const DataTable = ({ data, onDelete, onEdit, isLoading }) => {
                 </TableHead>
                 <TableBody>
                     {data.map((row) => (
-                        <TableRow key={row.id}>
+                        <TableRow className="user-table-row" key={row.id}>
                             <TableCell>{row.name}</TableCell>
                             <TableCell>{row.email}</TableCell>
                             <TableCell>{row.gender}</TableCell>
