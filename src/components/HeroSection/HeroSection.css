@@ -1,6 +1,6 @@
 .hero {
     text-align: center;
-    padding: 100px 20px;
+    padding: 10px 20px;
 }
 
 .hero h1 {
@@ -37,25 +37,102 @@
     cursor: pointer;
 }
 
+.start-button {
+    background-color: #000;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 25px;
+    width: 150px;
+    height: 45px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .hero-images {
-    position: relative;
     margin-top: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.gradient {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+}
+
+.bottom-left {
+    bottom: 25%;
+    left: 25%;
+    background: rgb(121, 255, 104);
+    background: radial-gradient(
+        circle,
+        rgba(121, 255, 104, 0.4767156862745098) 0%,
+        rgba(255, 255, 255, 0.1) 50%
+    );
+}
+
+.bottom-center {
+    bottom: 0;
+    left: 50%;
+    background: rgb(121, 255, 104);
+    background: radial-gradient(
+        circle,
+        rgba(255, 132, 247, 0.477) 0%,
+        rgba(255, 255, 255, 0.1) 50%
+    );
+    transform: translateX(-50%);
+}
+
+.bottom-right {
+    bottom: 25%;
+    right: 25%;
+    background: rgb(121, 255, 104);
+    background: radial-gradient(
+        circle,
+        rgba(121, 255, 104, 0.4767156862745098) 0%,
+        rgba(255, 255, 255, 0.1) 50%
+    );
 }
 
 .chat-image {
-    width: 200px;
-    height: auto;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 35%;
+    right: 42%;
+    width: 11%;
+    z-index: 5;
+    height: auto;
 }
 
 .gift-image {
-    width: 100px;
+    width: 12%;
     height: auto;
     position: absolute;
-    top: 20%;
-    left: 60%;
+    top: 36%;
+    left: 49%;
     transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.avatar-image {
+    width: 12%;
+    height: auto;
+    position: absolute;
+    top: 47%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.avatar_chat-image {
+    width: 15%;
+    height: auto;
+    position: absolute;
+    top: 25%;
+    left: 41%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
 }
