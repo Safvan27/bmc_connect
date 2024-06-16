@@ -1,16 +1,8 @@
 import OutlinedInput from "@mui/material/OutlinedInput";
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import Button from "../../components/Button";
 import "./HeroSection.css";
-const HeroSection = ({}) => {
-    const navigate = useNavigate();
-    const handleButtonClick = () => {
-        console.log("clicked");
-        navigate("/user-management");
-    };
-    console.log("clicked");
 
+const HeroSection = ({}) => {
     return (
         <section className="hero">
             <h1>
@@ -22,12 +14,7 @@ const HeroSection = ({}) => {
                 placeholder="Enter your phone number"
                 size="medium"
                 endAdornment={
-                    <button
-                        className="start-button"
-                        onClick={handleButtonClick}
-                    >
-                        Get started
-                    </button>
+                    <button className="start-button">Get started</button>
                 }
                 sx={{
                     borderRadius: "25px",

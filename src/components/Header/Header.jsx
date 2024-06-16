@@ -11,6 +11,9 @@ const Header = () => {
     const handleHomeClick = () => {
         navigate("/");
     };
+    const handleSignUp = () => {
+        navigate("/user-management");
+    };
 
     return (
         <header className="navbar">
@@ -58,7 +61,9 @@ const Header = () => {
                     aria-describedby="outlined-weight-helper-text"
                 />
                 <Button type="transparent-no-border">Sign In</Button>
-                <Button type="default">Sign Up</Button>
+                <Button type="default" onClick={handleSignUp}>
+                    Sign Up
+                </Button>
             </div>
         </header>
     );
