@@ -1,6 +1,6 @@
 .App {
     text-align: center;
-    background-color: #ffffff;
+    background-color: #fefefe;
 }
 
 *::-webkit-scrollbar {
@@ -13,12 +13,12 @@
 }
 
 *::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #adadad;
     border-radius: 6px;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #838383;
 }
 
 .App-logo {
@@ -40,7 +40,7 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: #fefefe;
 }
 
 .App-link {

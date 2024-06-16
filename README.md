@@ -28,3 +28,4 @@ Clone the repo and install the packages by `npm install` then run locally by `np
 2. Used SVG format for all images so that performance will be increased
 3. Used p, footer, header, section etc. tags for accessibility improvement
 4. Added loader in the table for better user experience if the api call gets delayed when receiving data
+5. For better web accessibility have used the color `#fefefe` instead of `#ffffff` and used `#0c0c0c` instead of `#000000` so that user cant have the strain of view pure black and bright white

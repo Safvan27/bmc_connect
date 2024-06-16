@@ -10,6 +10,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import AddFrom from "../AddForm";
 import React, { useState } from "react";
+import "./Modal.css";
 
 import StatsChart from "../StatsChart";
 export default function Modal({
@@ -31,7 +32,7 @@ export default function Modal({
     return (
         <React.Fragment>
             <Dialog open={open} disableEscapeKeyDown>
-                <DialogTitle className="form-label">
+                <DialogTitle className="dialog-header">
                     {title}
                     {type !== "ADD" && (
                         <FormControl
@@ -70,7 +71,7 @@ export default function Modal({
                     <CloseIcon />
                 </IconButton>
                 <Divider variant="middle" />
-                <DialogContent>
+                <DialogContent className="dialog-content">
                     {type === "ADD" ? (
                         <AddFrom handleAddCreator={handleAddCreator} />
                     ) : (

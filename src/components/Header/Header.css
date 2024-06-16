@@ -11,7 +11,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: #fff;
+    background-color: #f5f5f5;
     box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -62,13 +62,13 @@ body {
 
 .auth-links a {
     text-decoration: none;
-    color: #000;
+    color: #121212;
     font-weight: bold;
 }
 
 .signup-btn {
     padding: 8px 16px;
     background-color: #6c63ff;
-    color: #fff;
+    color: #f4f4f4;
     border-radius: 4px;
 }
